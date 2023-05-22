@@ -68,7 +68,7 @@ for path_image in list_path_images:
 # path_sample_dir = base_path / sample_name
 # path_image = path_sample_dir / f"{sample_name}.tiff"
 
-for pos, path_image in enumerate(list_images_to_process[1:2], start=1):
+for pos, path_image in enumerate(list_images_to_process[:1], start=1):
     print(f"processing {pos}/{len(list_images_to_process)} | {path_image.name}")
 
     list_images = []
@@ -90,7 +90,9 @@ for pos, path_image in enumerate(list_images_to_process[1:2], start=1):
 # %% inferences
     
     # change directory to relaynet folder
-    os.chdir(r"C:\Users\admin2\Desktop\development\OCT_fetal_membranes\relaynet_pytorch")
+    # os.chdir(r"C:\Users\admin2\Desktop\development\OCT_fetal_membranes\relaynet_pytorch")
+    os.chdir(r"./relaynet_pytorch")
+
 
     
     from relaynet_pytorch.relay_net import ReLayNet
@@ -166,7 +168,7 @@ for pos, path_image in enumerate(list_images_to_process[1:2], start=1):
             # shape input matrix
             image[0, 0, ...] = im
     
-            path_model = Path(r"C:\Users\admin2\Desktop\development\OCT_fetal_membranes\relaynet_pytorch\ReLayNet_model\relaynet_model.model") # path to the model
+            path_model = Path(r"./ReLayNet_model/relaynet_model.model") # path to the model
     
             relaynet_model = torch.load(str(path_model))
             out = relaynet_model(torch.Tensor(image).cuda())

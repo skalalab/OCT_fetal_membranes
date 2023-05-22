@@ -167,7 +167,7 @@ def compute_layer_thickness(mask, method, debug=True):
         poly_degree = 2
         stdevs = 3
         
-        print(f"x_vals: {x_vals}")
+        # print(f"x_vals: {x_vals}")
         min_samples= 20 # arbitrarily set to 20 since previous function was deprecated
         # min_samples parameter see this link 
         # https://github.com/scikit-learn/scikit-learn/commit/f8991210f022270d640a302820ed4b9ec58b42c1
