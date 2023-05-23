@@ -48,7 +48,7 @@ figure, plot(pressure_interp_cropped)
 fig = figure('Position',[round(0.1*scrsz(3)) round(0.1*scrsz(4)) round(0.8*scrsz(3)) round(0.8*scrsz(4))]);     % Monitor 1
 plot(apex_rise_metric_cropped,pressure_interp_cropped,'LineWidth', 2, 'Color', 'b'); hold on; ax=gca;ax.FontSize=25;ax.LineWidth=2; ylabel('Pressure [kPa]', 'Interpreter', 'latex', 'FontSize', 25); xlabel('Apex rise [mm]', 'Interpreter', 'latex', 'FontSize', 25); hold on;
 
-%% Save [Apex Rise, Pressure] pairs to CSV file
+%% Save [Apex Rise, Pressure] pairs to CSV file %%
 
 filename = strcat(fname(1:end-4), '_Apex.csv');
 writematrix([apex_rise_metric_not_cropped, pressure_interp_not_cropped], cat(2,path,filename));
