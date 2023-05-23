@@ -15,7 +15,7 @@ Thickness = (InitialThickness*InitialApex*InitialRadius)./(Apex.*Radius);  % in 
 Tension = (Pressure.*Radius)/2000;   % in [N/mm]
 
 YoungMod = (1-PoissonRatio)*(Pressure.*Radius.^2)./(2*Apex.*Thickness);   % in [kPa]
-Strain = Apex./Radius;% *****
+Strain = log(1 + (Apex.^2)/15^2);% *****
 Stress = YoungMod.*Strain;   % in [kPa] *****
 
 %figure, plot(Apex, Pressure);
