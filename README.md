@@ -1,4 +1,8 @@
-# OCT Measurement of mechanical properties in human fetal membranes
+# OCT measurement of mechanical properties in human fetal membranes
+
+Trained model can be found in ReLayNet_model, and representative OCT video files from two loading test (in multipage TIFF format) can be found at the link below (Google Drive). 
+https://drive.google.com/file/d/1NlU1fg9JVhekslUgs4mQXqzJT4vaYESt/view?usp=share_link
+Complete Raw or TIFF OCT datasets from all cases are available upon request from the corresponding author.
 
 ## Dataset Processing 
 
